@@ -1,0 +1,28 @@
+<ion-view view-title="Financeiro">
+  <ion-content class="fundo-app">
+    <div class="formulario">
+      <div class="list card">
+        <label class="item item-input item-select">
+          <span class="input-label">Semestre letivo</span>
+          <select ng-model="filtro.semestre" ng-options="s for s in semestres" ng-change="carregar()"></select>
+        </label>
+      </div>
+
+      <div class="list card">
+        <div class="item item-text-wrap mensalidade" ng-repeat="m in mensalidades">
+          <div class="mensalidade-topo">
+            <h2>{{ m.mes }}</h2>
+            <span class="status" ng-class="{ 'status-paga': m.status === 'Paga', 'status-apagar': m.status === 'A Pagar' }">{{ m.status }}</span>
+          </div>
+          <p>Vencimento: {{ m.vencimento | date:'dd/MM/yyyy' }}</p>
+          <p class="valor">{{ m.valor | currency:'R$ ' }}</p>
+
+          <div ng-if="m.status === 'A Pagar'">
+            <p class="linha-digitavel">{{ m.codigoBarras }}</p>
+            <button class="button button-small button-ucsal" ng-click="copiarCodigo(m)">Copiar Código de Barras</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
