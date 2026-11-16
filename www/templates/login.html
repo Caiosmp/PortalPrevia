@@ -1,0 +1,25 @@
+<ion-view view-title="Entrar">
+  <ion-content class="tela-login">
+    <main class="login-caixa">
+      <h1 class="login-titulo">Portal do Aluno</h1>
+      <p class="login-subtitulo">Universidade Católica do Salvador</p>
+
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Matrícula</span>
+          <input type="text" inputmode="numeric" ng-model="dados.matricula" placeholder="Ex.: 20261001">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Senha</span>
+          <input type="password" ng-model="dados.senha" placeholder="Sua senha">
+        </label>
+      </div>
+
+      <p class="mensagem mensagem-erro" ng-show="erro" role="alert">{{ erro }}</p>
+
+      <button class="button button-block button-ucsal" ng-click="entrar()">Entrar</button>
+
+      <p class="login-dica">Teste: matrícula 20261001 e senha 123456</p>
+    </main>
+  </ion-content>
+</ion-view>
