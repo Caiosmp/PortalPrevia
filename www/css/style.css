@@ -1,0 +1,264 @@
+:root {
+  --ucsal-marinho: #0b2a5b;
+  --ucsal-azul: #1d6fb8;
+  --ucsal-azul-claro: #e3effa;
+  --branco: #ffffff;
+  --fundo: #f3f6fa;
+  --texto: #1a2433;
+  --texto-suave: #4d5a6c;
+  --borda: #d5dde8;
+  --verde: #1e7b3a;
+  --laranja: #f2a33a;
+  --laranja-texto: #3d2600;
+  --erro: #b3261e;
+}
+
+.bar.bar-ucsal {
+  background-color: var(--ucsal-marinho);
+  border-color: var(--ucsal-marinho);
+  background-image: none;
+}
+
+.bar.bar-ucsal .title,
+.bar.bar-ucsal .button {
+  color: var(--branco);
+}
+
+.button.button-ucsal {
+  background-color: var(--ucsal-azul);
+  border-color: var(--ucsal-azul);
+  color: var(--branco);
+}
+
+.button.button-ucsal.activated,
+.button.button-ucsal:hover {
+  background-color: var(--ucsal-marinho);
+  border-color: var(--ucsal-marinho);
+  color: var(--branco);
+}
+
+.fundo-app {
+  background-color: var(--fundo);
+  color: var(--texto);
+}
+
+.tela-login {
+  background-color: var(--ucsal-marinho);
+}
+
+.login-caixa {
+  max-width: 400px;
+  margin: 48px auto;
+  padding: 28px 20px;
+  background-color: var(--branco);
+  border-radius: 10px;
+}
+
+.login-titulo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ucsal-marinho);
+}
+
+.login-subtitulo {
+  margin: 4px 0 20px;
+  color: var(--texto-suave);
+}
+
+.login-dica {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+.mensagem {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.mensagem-erro {
+  background-color: #fbe9e7;
+  color: var(--erro);
+}
+
+.mensagem-sucesso {
+  background-color: #e6f4ea;
+  color: var(--verde);
+}
+
+.menu-aluno {
+  padding: 16px;
+  background-color: var(--ucsal-azul-claro);
+  color: var(--ucsal-marinho);
+}
+
+.menu-aluno strong,
+.menu-aluno span {
+  display: block;
+}
+
+.menu-aluno span {
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+
+.filtros {
+  display: flex;
+  gap: 8px;
+  padding: 12px 10px 0;
+}
+
+.button.botao-filtro {
+  background-color: var(--branco);
+  border: 1px solid var(--ucsal-azul);
+  color: var(--ucsal-azul);
+  border-radius: 20px;
+}
+
+.button.botao-filtro.ativo {
+  background-color: var(--ucsal-azul);
+  color: var(--branco);
+}
+
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0 4px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(11, 42, 91, 0.12);
+}
+
+.cartao {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartao .item-text-wrap {
+  flex: 1;
+}
+
+.cartao-imagem {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cartao-titulo,
+.detalhe-titulo {
+  margin: 8px 0 4px;
+  font-weight: 700;
+  color: var(--ucsal-marinho);
+}
+
+.cartao-data {
+  font-size: 13px;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--ucsal-azul-claro);
+  color: var(--ucsal-marinho);
+}
+
+.etiqueta.etiqueta-evento {
+  background-color: var(--ucsal-marinho);
+  color: var(--branco);
+}
+
+.detalhe {
+  max-width: 760px;
+  margin: 16px auto;
+}
+
+.detalhe-titulo {
+  font-size: 20px;
+}
+
+.item p.detalhe-texto {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--texto);
+}
+
+.formulario {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 0 24px;
+}
+
+.formulario > .button,
+.formulario > .mensagem {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+}
+
+.item.item-divider {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ucsal-marinho);
+  background-color: var(--ucsal-azul-claro);
+}
+
+.item-input input[disabled] {
+  background-color: transparent;
+  color: var(--texto-suave);
+}
+
+.mensalidade-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mensalidade-topo h2 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--ucsal-marinho);
+}
+
+.item p.valor {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.status {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status.status-paga {
+  background-color: var(--verde);
+  color: var(--branco);
+}
+
+.status.status-apagar {
+  background-color: var(--laranja);
+  color: var(--laranja-texto);
+}
+
+.item p.linha-digitavel {
+  margin: 8px 0;
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--texto);
+  word-break: break-all;
+}
