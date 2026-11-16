@@ -1,0 +1,24 @@
+<ion-view view-title="Mural UCSal">
+  <ion-content class="fundo-app">
+    <div class="filtros" role="group" aria-label="Filtrar por categoria">
+      <button class="button button-small botao-filtro" ng-class="{ ativo: filtro.categoria === '' }" ng-click="filtrar('')">Todos</button>
+      <button class="button button-small botao-filtro" ng-class="{ ativo: filtro.categoria === 'Notícia' }" ng-click="filtrar('Notícia')">Notícias</button>
+      <button class="button button-small botao-filtro" ng-class="{ ativo: filtro.categoria === 'Evento' }" ng-click="filtrar('Evento')">Eventos</button>
+    </div>
+
+    <div class="grade-cards">
+      <article class="card cartao" ng-repeat="n in noticias | filter:{ categoria: filtro.categoria }">
+        <img class="cartao-imagem" ng-src="{{ n.imagem }}" alt="">
+        <div class="item item-text-wrap">
+          <span class="etiqueta" ng-class="{ 'etiqueta-evento': n.categoria === 'Evento' }">{{ n.categoria }}</span>
+          <h2 class="cartao-titulo">{{ n.titulo }}</h2>
+          <p class="cartao-data">{{ n.data | date:'dd/MM/yyyy' }}</p>
+          <p>{{ n.resumo }}</p>
+        </div>
+        <div class="item">
+          <button class="button button-small button-ucsal" ng-click="lerMais(n)">Ler mais</button>
+        </div>
+      </article>
+    </div>
+  </ion-content>
+</ion-view>

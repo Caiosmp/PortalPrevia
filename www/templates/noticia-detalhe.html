@@ -1,0 +1,15 @@
+<ion-view view-title="{{ noticia.categoria }}">
+  <ion-content class="fundo-app">
+    <article class="card detalhe" ng-if="noticia">
+      <img class="cartao-imagem" ng-src="{{ noticia.imagem }}" alt="">
+      <div class="item item-text-wrap">
+        <span class="etiqueta" ng-class="{ 'etiqueta-evento': noticia.categoria === 'Evento' }">{{ noticia.categoria }}</span>
+        <h2 class="detalhe-titulo">{{ noticia.titulo }}</h2>
+        <p class="cartao-data">{{ noticia.data | date:'dd/MM/yyyy' }}</p>
+        <p class="detalhe-texto">{{ noticia.conteudo }}</p>
+      </div>
+    </article>
+
+    <p class="mensagem mensagem-erro detalhe" ng-if="!noticia">Publicação não encontrada.</p>
+  </ion-content>
+</ion-view>
